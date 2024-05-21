@@ -1,0 +1,74 @@
+<%- include("navbar1.ejs") %>
+
+<div class="admin_add bg-dark">
+	<p class="border-bottom text-white fs-4" style="height:50px;">Food Ordering System</p>
+	<p class="border-bottom text-white fs-4 p-0">Admin
+		<i class="fa-solid fa-user"></i></p>
+
+	<div class="d-grid gap-3">
+  		<div class="p-2 bg-primary text-white fs-5 "><i class="fa-solid fa-gauge"></i>
+            <a class="text-white text-decoration-none" href="/RestaurantAdd">Dashboard</a></div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-cart-shopping"></i> Orders</div>
+  		<div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-notes-medical float-start fs-5"></i> <p class="float-start fs-5">Catalog</p>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/RestaurantAdd">Restaurants</a></li>
+                <li><a class="dropdown-item" href="#">Restaurant Manager</a></li>
+                <li><a class="dropdown-item" href="#">Restaurant Categories</a></li>
+            </ul>
+      </div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-users"></i> Customers Manager</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-cart-shopping"></i> Pages</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-sharp fa-solid fa-clipboard"></i> Settings</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-arrow-right-to-bracket"></i> Logout</div>
+	</div>
+	
+</div>
+
+<div class="admin_add1 bg-secondary">
+	<div class="border-bottom" style="height:50px;"><i class="fa-solid fa-bars fs-3 text-white"></i></div>
+	<table border="2" width="100%" class="bg-white">
+        <h1>RESTAURANTS DETAILS</h1>
+        <tr>
+            <th></th>
+            <th></th>
+            <th> R_id</th>
+            <th class="text-center">Images</th>
+            <th>Restaurant Name</th>
+            <th class="text-center">Description</th>
+            <th>Staus</th>
+            
+            
+        </tr>
+    <% 
+        for(i=0;i<list.length;i++)
+        {
+    %>
+    <tr>
+       <td><a href="/edit_restaurant/<%=list[i].restaurant_id%>">
+            <button class="btn btn-success btn-sm">
+                <i class="fa fa-edit"></i>
+            </button>
+                </a>
+        </td>
+       <td><button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td>
+        <td>
+            <%=i+1%>
+        </td>
+        <td><img src="Images/<%=list[i].Restaurant_image%>" width="100px" height="100px" class="rounded-circle"></td>
+        <td><%=list[i].Restaurant_name%></td>
+        <td><%=list[i].Restaurant_Description%></td>
+        <!-- <td><%=list[i].Restaurant_category%></td> -->
+        <td><button class="btn btn-primary btn-sm">Open</button></td>
+       
+    </tr>
+    <%
+        }
+    %>
+    </table>
+  
+</div>
+</html>
+

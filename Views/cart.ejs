@@ -1,0 +1,93 @@
+<%- include('navbar1.ejs') %>
+
+
+<section class="cart container mt-2 my-3 py-5">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-header"><b>Shopping Cart</b></div>
+			<div class="card-body">
+				<table class="table table-bordered" style="width: 100%;">
+					<tr>
+						<th>Food Image</th>
+						<th>Food Name</th>
+						<th>Description</th>
+						<th>Quantity</th>
+						
+						<th>Total Price</th>
+						<th colspan="2">Remove</th>
+					</tr>
+					<% 
+					if(cart.length > 0)
+					{
+						let total = 0;
+
+						cart.forEach(item => {
+					%>
+					<tr>
+						<td ><img src="Images/<%=item.food_image%>" height="150px" width="150px"></td>
+						<td><%= item.food_name %></td>
+						<td><%=item.description%></td>
+						<td><%= item.quantity %></td>
+						<td><%= item.price %></td>
+						<td><%= parseFloat(item.quantity) * parseFloat(item.price) %></td>
+						<form method="post" action="/remove_product">
+                        <td colspan="2">
+                            <input type="hidden" name="id" value="<%= item.addmenu_id%>">
+                            <input type="submit" name="remove_btn" class="btn btn-danger" value="Remove">
+                        </td>
+                            </form>
+					</tr>
+					<%
+							total += parseFloat(item.quantity) * parseFloat(item.price);
+						})
+					%>
+					<tr>
+						<td colspan="4" aling="right"><b>Total</b></td>
+						<td><%= total %></td>
+						<td>&nbsp;</td>
+					</tr>
+					<%
+					}
+					else
+					{
+					%>
+
+					<tr>
+						<td colspan="5" align="center">No Item Found in Cart</td>
+					</tr>
+
+					<%
+					}
+					%>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+</div>
+</div>
+</body>
+</html>
+
+<script>
+
+function remove_item(id)
+{
+if(confirm("Are you sure you want to remove it?"))
+{
+window.location.href = `/remove_item?id=${id}`;
+}
+}
+
+</script>
+
+   <a href="/checkout" class="text-decoration-none"> 
+    <button type="submit" class="btn btn-danger">proceede to checkout <i class="fa-solid fa-right-long"></i></button>
+    </a>
+
+</section>
+</body>
+</html>
+<%- include('footer.ejs') %>

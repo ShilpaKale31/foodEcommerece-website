@@ -1,0 +1,71 @@
+<%- include('navbar1.ejs') %>
+
+<div class="container-fluid mt-4">
+	<div class="row">
+		<div class="col-md-3 bg-danger col3">
+			<div class="text-white fs-4" style="background-color:red;">FOOD
+				<i class="fa-solid fa-utensils float-end text-white fs-5 mt-2"></i>
+			</div>
+			<div>
+			<ul class="list-none w-100" style="margin-left:-20px">
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100  border border-secondary border-1">Thali</li></a>
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100 border border-secondary border-1">Paneer</li></a>
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100 border border-secondary border-1">Dosa</li></a>
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100 border border-secondary border-1">Biryani</li></a>
+				</ul>
+			</div>
+
+			<div class="text-white fs-4" style="background-color:red;">DRINKS
+				<i class="fa-solid fa-utensils float-end text-white fs-5 mt-2"></i>
+			</div>
+			<div>
+			<ul class="list-none w-100" style="margin-left:-20px">
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100  border border-secondary border-1">Lemon ice tea</li></a>
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100 border border-secondary border-1">Green Apple Ice Tea</li></a>
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100 border border-secondary border-1">Peach Ice Tea</li></a>
+			<a href="#" class="text-decoration-none"><li class="d-inline-block text-white fs-4 w-100 border border-secondary border-1">Fresh Watermelon Juice</li></a>
+				</ul>
+			</div>
+		
+	</div>
+
+	<div class="col-md-9  mt-4">
+		<h1 class="text-danger text-center">Grill Park-MENU</h1>
+		<div class="text-center mt-4">
+		<a href="/All1" class="text-decoration-none"><button class="btn btn-outline-danger">All</button></a>
+		<a href="/menu_list1" class="text-decoration-none"><button class="btn btn-outline-danger">Food</button></a>
+		<a href="/drinks1" class="text-decoration-none"><button class="btn btn-outline-danger">Drinks</button></a>
+	</div>
+		<div class="row mt-4">
+		<div class="col-md-3 text-center s3_col">
+        <img src="https://b.zmtcdn.com/data/dish_photos/624/1cdb54c5ab878ea8fb6255ac43f30624.jpg" class="img-fluid" height="250px" width="300px">
+        <h4 class="text-center text-secondary">Lemon ice tea</h4>
+        <p class="text-center text-secondary">Made with Lemon juice and soda</p>
+        <h5>₹60</h5>
+        <a href="#" class="text-decoration-none"><button class="btn btn-danger border border-secondary border-3 rounded-pill">Add To Cart</button></a>
+      </div>
+      <div class="col-md-3 text-center s3_col">
+        <img src="https://b.zmtcdn.com/data/dish_photos/fa3/eebe3e4bec0f5ba3e728ae261f8a5fa3.jpg" class="img-fluid" height="250px" width="300px">
+        <h4 class="text-center text-secondary">Green Apple Ice Tea</h4>
+        <p class="text-center text-secondary">Made with apple juice and lemon</p>
+        <h5>₹60</h5>
+        <a href="#" class="text-decoration-none"><button class="btn btn-danger border border-secondary border-3 rounded-pill">Add To Cart</button></a>
+      </div>
+      <div class="col-md-3 text-center s3_col">
+        <img src="https://b.zmtcdn.com/data/dish_photos/70f/dc9d59814b829d6f2bc3d51250ab770f.jpg" class="img-fluid" height="250px" width="300px">
+        <h4 class="text-center text-secondary">Peach Ice Tea</h4>
+        <p class="text-center text-secondary">Summer is all about peaches and we serve exactly that..</p>
+        <h5>₹80</h5>
+        <a href="#" class="text-decoration-none"><button class="btn btn-danger border border-secondary border-3 rounded-pill">Add To Cart</button></a>
+      </div>
+      <div class="col-md-3 text-center s3_col">
+        <img src="https://b.zmtcdn.com/data/dish_photos/6bf/ef65ea9bcf813e7982e7e8f0e77e76bf.jpg" class="img-fluid" height="250px" width="300px">
+        <h4 class="text-center text-secondary">Fresh Watermelon Juice</h4>
+        <p class="text-center text-secondary">Made with fresh watermelon juice </p>
+        <h5>₹80</h5>
+        <a href="#" class="text-decoration-none"><button class="btn btn-danger border border-secondary border-3 rounded-pill">Add To Cart</button></a>
+      </div>
+		</div>
+	</div>
+</div>
+<%- include('footer.ejs') %>

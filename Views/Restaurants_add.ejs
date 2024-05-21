@@ -1,0 +1,60 @@
+<%- include("navbar1.ejs") %>
+
+<div class="admin_add bg-dark">
+	<p class="border-bottom text-white fs-4" style="height:50px;">Food Ordering System</p>
+	<p class="border-bottom text-white fs-4 p-0">Admin
+		<i class="fa-solid fa-user"></i></p>
+
+	<div class="d-grid gap-3">
+  		<div class="p-2 bg-primary text-white fs-5 ">
+    
+		   <a href="/vist_dashboard" class="text-white text-decoration-none">Dashboard</a></div>
+            <a class="text-decoration-none" href="/admin_addmenu">
+                <div class="p-2 text-white fs-5">Add Menu</div>
+                </a>
+                <a class="text-decoration-none" href="/print_menu">
+                    <div class="p-2 text-white fs-5">Menu List</div>
+                    </a>
+  		<div class="p-2 bg-dark text-white fs-5 ">
+            <i class="fa-solid fa-cart-shopping"></i> Orders</div>
+  		<div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-notes-medical float-start fs-5"></i> <p class="float-start fs-5">Catalog</p>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/RestaurantAdd">Restaurants</a></li>
+                <li><a class="dropdown-item" href="/Print_restaurant">Restaurant Manager</a></li>
+                <li><a class="dropdown-item" href="#">Restaurant Categories</a></li>
+            </ul>
+      </div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-users"></i> Customers Manager</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-cart-shopping"></i> Pages</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-sharp fa-solid fa-clipboard"></i> Settings</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-arrow-right-to-bracket"></i> Logout</div>
+	</div>
+	
+</div>
+
+<div class="admin_add1 bg-secondary">
+	<div class="border-bottom" style="height:40px;">
+        <i class="fa-solid fa-bars fs-3 text-white"></i></div>
+	<form class="bg-white" method="post" action="/restaurantAdd" enctype="multipart/form-data">
+		<label class="w-100 fs-4 border-bottom text-black">Add new Restaurant</label>
+		<label class="fs-5">Restaurant name*</label><br>
+		<input type="text" name="restaurant_name" placeholder="Enter food name" class="input2 mt-3"><br>
+		<label class="fs-5">Restaurant Category*</label><br>
+		<input type="text" name="restaurant_category" placeholder="Enter food name" class="input2 mt-3"><br>
+		<label class="fs-5" >Description*</label><br>
+		<textarea class="w-50 mt-3" placeholder="Customers first name" name="restaurant_description"></textarea>
+		<div>
+  			<label for="files" class="btn text-white fs-5 bg-danger"
+			 style="position:relative; top: -80px; left:600px;"><i class="fa-solid fa-arrow-up-from-bracket text-white"></i> Upload Image</label>
+  			<input id="files" style="visibility:hidden;" type="file" name="restaurant_image">
+		</div>
+		<button class="btn btn-primary"style="position:relative; top:-50px;">Submit</button>
+		<button class="btn btn-danger"style="position:relative; top:-50px;">Reset</button>
+
+	</form>
+	
+</div>
+</html>

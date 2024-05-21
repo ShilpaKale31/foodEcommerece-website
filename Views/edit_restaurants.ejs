@@ -1,0 +1,39 @@
+<%- include("navbar1.ejs") %>
+
+
+<div class="admin_add1 bg-secondary">
+	<div class="border-bottom" style="height:50px;"><i class="fa-solid fa-bars fs-3 text-white"></i></div>
+	
+	<form class="bg-white" method="post" action="/update_restaurants" enctype="multipart/form-data">
+		<label class="w-100 fs-4 border-bottom text-black">Update Restaurant</label>
+		<input type="hidden" name="restaurant_id" value="<%=re_det[0].restaurant_id%>">
+
+		<label class="fs-5">Restaurant name*</label><br>
+
+		<input type="text" name="restaurant_name" placeholder="Enter food name" class="input2 mt-3" 
+        value="<%=re_det[0].Restaurant_name%>"><br>
+
+		<label class="fs-5">Restaurant Category*</label><br>
+		<input type="text" name="restaurant_category" placeholder="Enter food name" 
+        class="input2 mt-3" value="<%=re_det[0].Restaurant_category%>"><br>
+
+		<label class="fs-5" >Description*</label><br>
+		<textarea class="w-25 mt-3" placeholder="Customers first name"
+         name="restaurant_description"><%=re_det[0].Restaurant_Description%></textarea><br>
+
+		<div>
+  			<label for="files" class="btn text-white fs-5 bg-danger" 
+            style="position:relative; top: -80px; left:600px;">
+            <i class="fa-solid fa-arrow-up-from-bracket text-white"></i> Upload Image</label>
+  			<input id="files" style="visibility:hidden;" type="file" 
+            name="restaurant_image">
+			<img src="/<%=re_det[0].Restaurant_image%>" width="100px">
+		</div>
+
+		<button class="btn btn-primary"style="position:relative; top:-20px;">Update</button>
+		<button class="btn btn-danger"style="position:relative; top:-20px;">Reset</button>
+
+	</form>
+	
+</div>
+</html>

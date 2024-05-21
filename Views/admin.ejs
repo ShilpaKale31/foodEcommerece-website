@@ -1,0 +1,31 @@
+<%- include("navbar.ejs") %>
+<div class="container-fluid">
+	<form method="post" action="/login">
+	<div class="admin shadow-lg p-3 mb-5 rounded bg-success">
+		<div class="text-center">
+			<h2 class="text-white lh-1">Foodtrip<img src="cover.png" height="100px" width="100px" class="text-danger"></h2>
+			<h6 class="text-white">ADMIN LOGIN</h6>
+		</div>
+			<div class="border border-1">
+			<p class="text-white text-center">Sign In to start your order</p>
+			<div class="input-group mb-3">
+  			<input type="text" class="form-control bg-warning text-white" placeholder="Enter your email"aria-label="Enter your email" 
+			aria-describedby="basic-addon2" name="email_id">
+  		<span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></span>
+		</div>
+		<div class="input-group mb-3 mt-4">
+			<input type="password" name="password" class="form-control bg-warning"
+			 placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+			<span class="input-group-text" id="basic-addon1">
+				<i class="fa-solid fa-lock"></i>
+			</span>
+		</div>
+		<p class="text-info fw-bold fs-5"><a class="text-decoration-none text-white">forget your password?</a>
+		  <button class="btn btn-danger float-end" data-target="#adminfailed" data-toggle="modal"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+			Login</button>
+		</p>
+	</div>
+	</div>
+</div>
+</form>
+<%- include("footer.ejs") %>

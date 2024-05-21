@@ -1,0 +1,38 @@
+<%- include("navbar.ejs") %>
+
+<form method="post" action="/Cust_login">
+    <div class="container-fluid">
+        <div class="admin shadow-lg p-3 mb-5 rounded bg-danger">
+            <div class="text-center">
+                <h3 class="text-white">SIGN IN</h3>
+                <p class="text-white border-bottom">Enter your credentials</p>
+            </div>
+            <div class="border border-1 mt-5">
+            <label class="text-white">Email<span class="text-danger">*</span></label>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Enter your email"
+              aria-label="Enter your email" aria-describedby="basic-addon2" name="email">
+              <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></span>
+            </div>
+        <label class="text-white">Password<span class="text-danger">*</span></label>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="Enter your Password"
+              aria-label="Enter your email" aria-describedby="basic-addon2" name="password">
+              <span class="input-group-text" id="basic-addon2"><i class="fa-regular fa-eye-slash"></i></span>
+            </div>
+        <label class="text-white">Remember me</label>
+            <input type="checkbox" name="">
+            <p class="text-dark fw-bold fs-5">forget your password?
+
+                <button class="btn btn-primary float-end">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</button>
+                <button class="btn btn-dark float-end">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Reset</button><br>
+                    <a class="text-center text-white  fs-5" href="/Customer_Registration">Register an account</a>
+            </p>
+        </div>
+        </div>
+    </div>
+    </form>
+
+<%- include('footer.ejs') %>

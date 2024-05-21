@@ -1,0 +1,32 @@
+<%- include("navbar1.ejs") %>
+
+<div class="admin_add bg-dark">
+	<p class="border-bottom text-white fs-4" style="height:50px;">Food Ordering System</p>
+	<p class="border-bottom text-white fs-4 p-0">Admin
+		<i class="fa-solid fa-user"></i></p>
+
+	<div class="d-grid gap-3">
+  		<div class="p-2 bg-primary text-white fs-5 "><i class="fa-solid fa-gauge"></i> Dashboard</div>
+		  <a class="text-decoration-none" href="/admin_addmenu">
+			<div class="p-2 text-white fs-5">Add Menu</div>
+			</a>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-cart-shopping"></i> Orders</div>
+  		<div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          		<i class="fa-solid fa-notes-medical float-start fs-5"></i> <p class="float-start fs-5">Catalog</p>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/RestaurantAdd">Restaurants</a></li>
+                <li><a class="dropdown-item" href="/Print_restaurant">Restaurant Manager</a></li>
+                <li><a class="dropdown-item" href="#">Restaurant Categories</a></li>
+            </ul>
+      </div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-users"></i> Customers Manager</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-cart-shopping"></i> Pages</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-sharp fa-solid fa-clipboard"></i> Settings</div>
+  		<div class="p-2 bg-dark text-white fs-5 "><i class="fa-solid fa-arrow-right-to-bracket"></i> Logout</div>
+	</div>
+	
+</div>
+</html>
+
